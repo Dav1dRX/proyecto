@@ -1,0 +1,49 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #e6f7ff;
+    text-align: center;
+    background-image:url('pilin.jpg');
+    background-size: cover;
+
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #3399ff;
+}
+
+button {
+    background-color: #3399ff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0066cc;
+}
+
+#options {
+    display: flex;
+    justify-content: space-around;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

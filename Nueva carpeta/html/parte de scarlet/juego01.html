@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/html/parte de scarlet/juego01.css">
+    <title>Par o Impar</title>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Adivina si es Par o Impar!</h1>
+        <p id="randomNumber">Haz clic en "Generar Número" para comenzar.</p>
+        <button onclick="generateRandomNumber()">Generar Número</button>
+        <div id="options">
+            <button onclick="checkResult('par')">Par</button>
+            <button onclick="checkResult('impar')">Impar</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script src="/html/parte de scarlet/juego01.js"></script>
+</body>
+</html>

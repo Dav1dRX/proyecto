@@ -1,0 +1,151 @@
+body {
+    background: #353535;
+    overflow: hidden;
+    margin: 0;
+    cursor: url(/imagenes/433133.png), auto;
+
+}
+img.imgbanner{
+    position: absolute;
+    top: 6cqi;
+    width: 700px;
+    z-index: 4;
+    left: 25%;
+    top: 10%;
+  
+  }
+/* animacion carrusel */
+.carousel-img {
+    opacity: 0; /* Establecemos la opacidad a 0 por defecto */
+    position: absolute; /* Cambiamos la posición a absoluta */
+    transition: opacity 0.5s ease; /* Agregamos una transición de opacidad */
+}
+.carousel-img {
+    display: block;
+    margin: auto; /* Esto centra horizontalmente las imágenes dentro del contenedor */
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+}
+
+.carousel-img.active {
+    opacity: 1; /* Mostramos la imagen activa cambiando la opacidad a 1 */
+}
+
+.carousel-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    width: 90%; /* Ajusta el ancho según sea necesario */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    height: 20%; /* Altura automática para adaptarse al contenido */
+    margin-top: 10%; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 10%; /* Para centrar verticalmente */
+    overflow: hidden;
+    background-color: #0000004d;
+    border-radius: 15px; /* Ajusta el radio de los bordes según sea necesario */
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel img {
+    width: 100%;
+    display: block; /* Asegúrate de que las imágenes estén visibles */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 90px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3cff00;
+    z-index: 0;
+    opacity: 0;
+    filter: blur(20px);
+    transition: width 0.2s, height 0.2s, opacity 0.2s;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(10);
+        opacity: 1;
+    }
+}
+
+
+.row {
+    display: block;
+    width: 100vw;
+    height: 125px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -35px;
+    margin-left: -33px;
+    position: relative; /* Agregado para establecer contexto de apilamiento para las flechas */
+}
+
+.hexagon {
+    position: relative;
+    width: 100px;
+    height: 57.74px;
+    background: #2b2b2b;
+    margin: 32.87px 2px;
+    display: block;
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+
+.hexagon::after,
+.hexagon::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    transition: all 0.2s linear;
+}
+
+.hexagon::after {
+    top: 100%;
+    border-top: 28.87px solid #2b2b2b;
+}
+
+.hexagon::before {
+    bottom: 100%;
+    border-bottom: 28.87px solid #2b2b2b;
+}
+
+.row.row-moved {
+    margin-left: 19px;
+}

@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    background-image: url('fondo/fondo3.jpg'); /* Reemplaza 'fondo.gif' con la ruta real de tu archivo GIF */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#imagenes {
+    max-width: 35%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#options {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}

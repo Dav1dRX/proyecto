@@ -1,0 +1,140 @@
+body {
+    background: #353535;
+    overflow: hidden;
+    cursor: url(/imagenes/433133.png), auto;
+
+   
+}
+
+.imgbanner {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    z-index: 4;
+    filter: drop-shadow(16px  8px #333333);
+}
+
+.img-container-row {
+    display: flex;
+    /* Elimina el espacio adicional entre las imágenes */
+    margin: 0 -10px;
+   
+}
+
+.img-container {
+    margin: 0 60px; /* Ajusta el margen entre las imágenes */
+    z-index: 4;
+    top: -60%;
+    left: -60%;
+    right: -70%;
+    transform: translate(0%, 70%);
+    filter: grayscale(100%);
+    
+    
+   
+}
+.img-container:hover{
+    filter: grayscale(0%);
+    
+}
+
+.img-container img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen para que se ajuste al contenedor */
+    height: 300px;
+    width: -90px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    
+
+   
+}
+
+.img-container:hover img {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón sobre la imagen */
+    box-shadow: 0px 0px 5px #09ff00;
+    box-shadow: 0px 0px 15px #09ff00;
+    box-shadow: 0px 0px 20px #09ff00;
+}
+
+
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #09ff00;
+    z-index: 0;
+    opacity: 0;
+    filter: blur(20px);
+    transition: width 0.2s, height 0.2s, opacity 0.2s;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(10);
+        opacity: 1;
+    }
+}
+
+.cancer{
+    margin-top: -35%;
+}
+.row {
+    display: block;
+    width: 100vw;
+    height: 125px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -35px;
+    margin-left: -33px;
+    position: relative; /* Agregado para establecer contexto de apilamiento para las flechas */
+}
+
+.hexagon {
+    position: relative;
+    width: 100px;
+    height: 57.74px;
+    background: #2b2b2b;
+    margin: 32.87px 2px;
+    display: block;
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+
+.hexagon::after,
+.hexagon::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    transition: all 0.2s linear;
+}
+
+.hexagon::after {
+    top: 100%;
+    border-top: 28.87px solid #2b2b2b;
+}
+
+.hexagon::before {
+    bottom: 100%;
+    border-bottom: 28.87px solid #2b2b2b;
+}
+
+.row.row-moved {
+    margin-left: 19px;
+}
+

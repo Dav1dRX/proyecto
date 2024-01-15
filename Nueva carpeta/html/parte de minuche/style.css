@@ -1,0 +1,155 @@
+body {
+  background-image: url(https://i.pinimg.com/originals/d8/55/ad/d855ad574a63b786b26c8229365c506e.gif);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+}
+
+.fondoxddd{
+  top: -299px
+}
+
+/* Contenedor de la sopa de letras */
+
+#contenedor {
+  border: 1px solid rgb(0, 17, 255);
+  padding: 20px;
+  float: left;
+  margin: 150px 20px;
+}
+
+#contenedor div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Estilo para cada cuadrado de la sopa de letras */
+
+#contenedor .letra {
+  height: 30px;
+  width: 30px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0;
+  font: 1em sans-serif;
+}
+
+/* Colores cuando se selecciona un cuadrado */
+
+#contenedor .selected {
+  background-color: rgb(8, 179, 2);
+}
+
+#contenedor:hover .selected:hover {
+  background-color: rgb(145, 255, 0);
+  font-weight: bold;
+}
+
+#contenedor>div>button:hover {
+  background-color: rgb(145, 255, 0);
+  font-weight: bold;
+}
+
+/* Indica que la letra es parte de una palabra que se ha encontrado */
+
+#contenedor .found {
+  background-color: #c0c0c0;
+  color: white;
+  border: 1px solid black;
+  font-weight: bold;
+  text-shadow: 0px 2px 3px #000;
+}
+
+#contenedor .found:hover {
+  background-color: rgb(145, 255, 0);
+  font-weight: bold;
+}
+
+/* Colores de palabras no encontradas cuando se pulsa el botón Resolver sopa de letras*/
+
+#contenedor .solved {
+  background-color: purple;
+  color: white;
+}
+
+/* Cambio de color de fondo cuando se encuentras todas las palabras*/
+
+#contenedor .complete {
+  background-color: green;
+}
+
+/**
+* Estilos para la lista de palabras
+*/
+
+#palabras-sopadeletras {
+  padding-top: 20px;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+  width: 300px;
+}
+
+#palabras-sopadeletras ul {
+  list-style-type: none;
+}
+
+#palabras-sopadeletras li {
+  padding: 3px 0;
+  font: 1em sans-serif;
+}
+
+/*Indica que la palabra ha sido encontrada en la lista */
+
+#palabras-sopadeletras .palabraEncontrada {
+  text-decoration: line-through;
+  color: rgb(255, 0, 0);
+}
+
+/**
+*  Estilos para el botón
+*/
+
+#BTNrefresh {
+  position: absolute;
+  bottom: 0em;
+}
+
+#BTNresolver {
+  bottom: 3em;
+  position: absolute;
+}
+
+/* Título */
+
+.titulo {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  font: normal 48px/normal "Warnes", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: normal;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  position: absolute;
+  top: 1em;
+}
+
+.titulo:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff;
+}

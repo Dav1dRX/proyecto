@@ -1,0 +1,222 @@
+body {
+  background: #353535;
+  overflow: hidden;
+  cursor: url(/imagenes/433133.png), auto;
+
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  z-index: 5;
+  border: 2px solid transparent;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.6);
+  animation: borderPulse 4s ease-in-out infinite alternate;
+  background: linear-gradient(45deg, transparent 48%, transparent 52%);
+  pointer-events: none;
+}
+
+@keyframes borderPulse {
+  0% {
+    border-color: #e8f74d;
+    box-shadow: 0 0 50px rgba(232, 247, 77, 1), 0 0 80px rgba(232, 247, 77, 0.8);
+  }
+  25% {
+    border-color: #5aabde;
+    box-shadow: 0 0 50px rgba(90, 171, 222, 1), 0 0 80px rgba(90, 171, 222, 0.8);
+  }
+  50% {
+    border-color: #ff6600;
+    box-shadow: 0 0 50px rgba(255, 102, 0, 1), 0 0 80px rgba(255, 102, 0, 0.8);
+  }
+  75% {
+    border-color: #13ff13;
+    box-shadow: 0 0 50px rgba(19, 255, 19, 1), 0 0 80px rgba(19, 255, 19, 0.8);
+  }
+  100% {
+    border-color: #bd2681;
+    box-shadow: 0 0 50px rgba(189, 38, 129, 1), 0 0 80px rgba(189, 38, 129, 0.8);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  width: 170px;
+}
+
+img.imgbanner {
+  position: absolute;
+  top: 60px; 
+  width: 700px;
+}
+
+
+
+
+.peppy img{
+  left: 88%;
+  top: 87%;
+}
+
+.juan img {
+  left: 70%;
+  top: 55%;
+}
+
+.img-container2 {
+  left: 30%;
+  top: 55%;
+  position: absolute;
+}
+
+.infoinsana {
+  position: absolute;
+  top: 60px; /* Cambié "6cqi" a un valor numérico */
+  width: 900px;
+}
+
+.grupal {
+  width: 450px;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.grupal img {
+  max-width: 440px;
+  width: 400%;
+
+  border-radius: 20px;
+  position: relative;
+  z-index: 4;
+}
+
+.grupal::before {
+  content: "";
+  position: absolute;
+  top: -35%; /* Ajusta esta posición según sea necesario para que la animación se extienda más allá del contenedor */
+  left: -35%; /* Ajusta esta posición según sea necesario para que la animación se extienda más allá del contenedor */
+  right: -35%; /* Ajusta esta posición según sea necesario para que la animación se extienda más allá del contenedor */
+  bottom: -35%; /* Ajusta esta posición según sea necesario para que la animación se extienda más allá del contenedor */
+  z-index: 3;
+  border-radius: 20px;
+  background: linear-gradient(to right, #e8f74d, #ff6600, #00ff66, #13ff13, #ad27ad, #bd2681, #6512b9, #ff3300, #5aabde);
+  background-size: 150% 150%; /* Mantén este valor para la animación más grande */
+  animation: gradientAnimation 6s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+.row {
+  display: block;
+  width: 100vw;
+  height: 125px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -35px;
+  margin-left: -33px;
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background: #2b2b2b;
+  margin: 32.87px 2px;
+  display: block;
+  transition: all 0.2s linear;
+}
+
+.hexagon::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  top: 100%;
+  border-top: 28.87px solid #2b2b2b;
+  transition: all 0.2s linear;
+}
+
+.hexagon::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  bottom: 100%;
+  border-bottom: 28.87px solid #2b2b2b;
+}
+
+.row.row-moved {
+  margin-left: 19px;
+}
+
+.cursor {
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  position: absolute;
+  box-shadow: 2px -3px 41px -1px rgba(241, 196, 15, 0.64);
+  z-index: 0;
+  opacity: 0;
+  background: linear-gradient(45deg, #e8f74d, #ff6600d9, #00ff66, #13ff13, #ad27ad, #bd2681, #6512b9, #ff3300de, #5aabde);
+  background-size: 400%;
+  animation: glower 20s linear infinite;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+@keyframes glower {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 400% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  75% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+
